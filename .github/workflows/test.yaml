@@ -1,0 +1,15 @@
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: bluethink-runner
+
+    steps:
+      - name: Make file
+        run: cp ~/workspace/action-test.git/hello ~/workspace/
